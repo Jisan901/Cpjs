@@ -1,7 +1,7 @@
 
 const puppeteer = require('puppeteer')
 
-(async () => {
+const funck = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -28,4 +28,8 @@ const puppeteer = require('puppeteer')
   console.log('The title of this blog post is "%s".', fullTitle);
 
   await browser.close();
-})();
+}
+
+setTimeout(()=>{
+  funck()
+},5000)
